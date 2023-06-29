@@ -13,11 +13,6 @@ export default function dfs(
   if (head.value < needle) {
     return dfs(head.right, needle);
   }
-
-  if (head.value > needle) {
-    return dfs(head.left, needle);
-  }
-
-  return false;
+  return dfs(head.left, needle);
 }
 
